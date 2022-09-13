@@ -64,15 +64,12 @@ var iterator = 0
 var sum: Double = 0
 var scores: [Double] = []
 
-for (_, score) in authorReadability {
-  scores.append(score)
-}
-//authorReadability.map() {
-//    sum += $0.value also works to build sum, was 
-// trying to put it in a while loop
-//  }
+//for (_, score) in authorReadability {
+//  scores.append(score)
+//}
 
-while (iterator < authorReadability.count){
+scores += authorReadability.values
+while (iterator < scores.count){
   sum += scores[iterator]
   iterator+=1
 }
